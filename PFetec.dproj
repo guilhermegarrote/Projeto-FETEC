@@ -195,6 +195,10 @@
             <Form>FrmQuestions</Form>
             <FormType>fmx</FormType>
         </DCCReference>
+        <DCCReference Include="UResult.pas">
+            <Form>FrmResult</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
