@@ -12,23 +12,30 @@ uses
 type
   TFrmQuestions = class(TForm)
     LayoutMain: TLayout;
-    Layout1: TLayout;
-    ListView1: TListView;
+    LayoutTop: TLayout;
+    LayoutCenter: TLayout;
+    LayoutBottom: TLayout;
+    LytA: TLayout;
+    Layout2: TLayout;
+    Layout3: TLayout;
+    Layout4: TLayout;
+    Image2: TImage;
+    Image1: TImage;
+    Text1: TText;
     RBA: TRadioButton;
-    RBD: TRadioButton;
-    RBC: TRadioButton;
+    Image3: TImage;
     RBB: TRadioButton;
-    RoundRect1: TRoundRect;
+    Image4: TImage;
+    RBC: TRadioButton;
+    Image5: TImage;
+    RBD: TRadioButton;
+    Image6: TImage;
     BtnConfirmar: TSpeedButton;
-    RoundRect2: TRoundRect;
-    RoundRect3: TRoundRect;
-    RoundRect4: TRoundRect;
-    RoundRect5: TRoundRect;
-    BtnJogar: TSpeedButton;
     procedure RBAChange(Sender: TObject);
     procedure RBBChange(Sender: TObject);
     procedure RBCChange(Sender: TObject);
     procedure RBDChange(Sender: TObject);
+    procedure BtnConfirmarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -41,6 +48,13 @@ var
 implementation
 
 {$R *.fmx}
+
+uses UResult;
+
+procedure TFrmQuestions.BtnConfirmarClick(Sender: TObject);
+begin
+FrmResult.show;
+end;
 
 procedure TFrmQuestions.RBAChange(Sender: TObject);
 begin

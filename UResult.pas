@@ -18,10 +18,10 @@ type
     ImgIcon: TImage;
     TextResult: TText;
     TextExplicacao: TText;
-    LblInitialMsg: TLabel;
     LayoutBottom: TLayout;
     Image7: TImage;
     BtnReiniciar: TSpeedButton;
+    ImgMsg: TImage;
   private
     { Private declarations }
   public
