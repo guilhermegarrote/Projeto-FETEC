@@ -1,0 +1,43 @@
+object FrmQuestions: TFrmQuestions
+  Left = 0
+  Top = 0
+  Caption = 'FrmQuestions'
+  ClientHeight = 640
+  ClientWidth = 360
+  Fill.Kind = Solid
+  Padding.Left = 8.000000000000000000
+  Padding.Top = 8.000000000000000000
+  Padding.Right = 8.000000000000000000
+  Padding.Bottom = 8.000000000000000000
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object PanelMain: TPanel
+    Align = Client
+    Size.Width = 344.000000000000000000
+    Size.Height = 624.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+  end
+  object PanelQuestions: TPanel
+    Align = Client
+    Size.Width = 344.000000000000000000
+    Size.Height = 624.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Rectangle1: TRectangle
+      Align = Center
+      Size.Width = 272.000000000000000000
+      Size.Height = 142.000000000000000000
+      Size.PlatformDefault = False
+      object FloatAnimation1: TFloatAnimation
+        Enabled = True
+        Duration = 2.000000000000000000
+        PropertyName = 'Position.X'
+        StartValue = 0.000000000000000000
+        StopValue = 100.000000000000000000
+      end
+    end
+  end
+end

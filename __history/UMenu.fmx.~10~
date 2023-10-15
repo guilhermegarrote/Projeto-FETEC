@@ -1,0 +1,147 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 640
+  ClientWidth = 360
+  Fill.Kind = Solid
+  Padding.Left = 8.000000000000000000
+  Padding.Top = 8.000000000000000000
+  Padding.Right = 8.000000000000000000
+  Padding.Bottom = 8.000000000000000000
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnShow = FormShow
+  DesignerMasterStyle = 3
+  object LayoutMain: TLayout
+    Align = Client
+    Size.Width = 344.000000000000000000
+    Size.Height = 624.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object LayoutLogo: TLayout
+      Align = MostTop
+      Size.Width = 344.000000000000000000
+      Size.Height = 81.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+    end
+    object Layout1: TLayout
+      Align = Top
+      Position.Y = 81.000000000000000000
+      Size.Width = 344.000000000000000000
+      Size.Height = 91.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object TLabel
+        Align = Bottom
+        StyledSettings = [Family, Style]
+        Margins.Bottom = 10.000000000000000000
+        Position.Y = 58.000000000000000000
+        Size.Width = 344.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.FontColor = claDodgerblue
+        TextSettings.HorzAlign = Center
+        Text = 'Escolha um tema:'
+        TabOrder = 0
+      end
+    end
+    object LayoutGroup: TLayout
+      Align = Top
+      Margins.Bottom = 100.000000000000000000
+      Position.Y = 172.000000000000000000
+      Size.Width = 344.000000000000000000
+      Size.Height = 389.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object BaseBtn: TRoundRect
+        Align = Bottom
+        Fill.Kind = Gradient
+        Fill.Gradient.Points = <
+          item
+            Color = xFF31E800
+            Offset = 0.000000000000000000
+          end
+          item
+            Color = xFF35FC00
+            Offset = 0.990683257579803500
+          end>
+        Fill.Gradient.Style = Radial
+        Margins.Left = 30.000000000000000000
+        Margins.Right = 30.000000000000000000
+        Margins.Bottom = 30.000000000000000000
+        Position.X = 30.000000000000000000
+        Position.Y = 302.000000000000000000
+        Size.Width = 284.000000000000000000
+        Size.Height = 57.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFF2FE200
+        object BtnJogar: TSpeedButton
+          Align = Client
+          StyledSettings = []
+          Size.Width = 284.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'JOGAR'
+          TextSettings.Font.Family = 'Calibri'
+          TextSettings.Font.Size = 18.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claWhite
+        end
+      end
+      object Line1: TLayout
+        Align = Top
+        Margins.Top = 10.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 344.000000000000000000
+        Size.Height = 120.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object Rectangle1: TRectangle
+          Align = Left
+          Margins.Left = 40.000000000000000000
+          Position.X = 40.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 120.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object Rectangle2: TRectangle
+          Align = Right
+          Margins.Right = 40.000000000000000000
+          Position.X = 184.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 120.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+      object Line2: TLayout
+        Align = Top
+        Margins.Top = 10.000000000000000000
+        Position.Y = 140.000000000000000000
+        Size.Width = 344.000000000000000000
+        Size.Height = 120.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object Rectangle4: TRectangle
+          Align = Left
+          Margins.Left = 40.000000000000000000
+          Position.X = 40.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 120.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object Rectangle5: TRectangle
+          Align = Right
+          Margins.Right = 40.000000000000000000
+          Position.X = 184.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 120.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+    end
+  end
+end
