@@ -59,7 +59,6 @@ type
     perguntas: array of array of string;
     respostas: array of array of string;
     coluna: integer;
-    linha: integer;
   end;
 
 var
@@ -77,10 +76,10 @@ begin
   SetLength(perguntas, 4, 4);
 
   // Preencher a matriz de perguntas com strings de exemplo
-  perguntas[0, 0] := 'a';
-  perguntas[0, 1] := 'a';
-  perguntas[0, 2] := 'a';
-  perguntas[0, 3] := 'a';
+  perguntas[0, 0] := '1';
+  perguntas[0, 1] := '2';
+  perguntas[0, 2] := '3';
+  perguntas[0, 3] := '4';
 
   perguntas[1, 0] := 'a';
   perguntas[1, 1] := 'a';
@@ -102,21 +101,21 @@ begin
 
   // Preencher a matriz de respostas com strings de exemplo
   respostas[0, 0] := 'a';
-  respostas[0, 1] := 'a';
-  respostas[0, 2] := 'a';
-  respostas[0, 3] := 'a';
-  respostas[0, 4] := 'a';
-  respostas[0, 5] := 'a';
+  respostas[0, 1] := 'b';
+  respostas[0, 2] := 'v';
+  respostas[0, 3] := 'c';
+  respostas[0, 4] := 'd';
+  respostas[0, 5] := 's';
   respostas[0, 6] := 'a';
-  respostas[0, 7] := 'a';
-  respostas[0, 8] := 'a';
-  respostas[0, 9] := 'a';
+  respostas[0, 7] := 'd';
+  respostas[0, 8] := 'f';
+  respostas[0, 9] := 'w';
   respostas[0, 10] := 'a';
-  respostas[0, 11] := 'a';
-  respostas[0, 12] := 'a';
-  respostas[0, 13] := 'a';
-  respostas[0, 14] := 'a';
-  respostas[0, 15] := 'a';
+  respostas[0, 11] := 'g';
+  respostas[0, 12] := 'b';
+  respostas[0, 13] := 'v';
+  respostas[0, 14] := 's';
+  respostas[0, 15] := 's';
 
   respostas[1, 0] := 'a';
   respostas[1, 1] := 'a';
@@ -225,9 +224,6 @@ end;
 procedure TFrmMenu.BtnJogarClick(Sender: TObject);
 begin
   InicializarMatrizes;
-  FrmQuestions.Show;
-  FrmQuestions.RBA.Text := respostas[coluna, 0];
-
+  FrmQuestions.ExecuteQuestions;
 end;
-
 end.

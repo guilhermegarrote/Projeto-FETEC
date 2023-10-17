@@ -7,7 +7,7 @@ uses
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Layouts,
   FMX.Objects, FMX.StdCtrls, FMX.Controls.Presentation, FMX.Ani,
   FMX.ListView.Types, FMX.ListView.Appearances, FMX.ListView.Adapters.Base,
-  FMX.ListView;
+  FMX.ListView, UMenu;
 
 type
   TFrmQuestions = class(TForm)
@@ -21,7 +21,7 @@ type
     Layout4: TLayout;
     Image2: TImage;
     Image1: TImage;
-    Text1: TText;
+    Pergunta: TText;
     RBA: TRadioButton;
     Image3: TImage;
     RBB: TRadioButton;
@@ -36,10 +36,12 @@ type
     procedure RBCChange(Sender: TObject);
     procedure RBDChange(Sender: TObject);
     procedure BtnConfirmarClick(Sender: TObject);
+    procedure ExecuteQuestions;
+    procedure UpdateQuestions;
   private
-    { Private declarations }
   public
-    { Public declarations }
+    posicaoPergunta: integer;
+    posicaoResposta: integer;
   end;
 
 var
@@ -51,9 +53,35 @@ implementation
 
 uses UResult;
 
+procedure TFrmQuestions.ExecuteQuestions;
+begin
+  FrmQuestions.Show;
+  posicaoPergunta := 0;
+  posicaoResposta := 0;
+  FrmQuestions.UpdateQuestions;
+end;
+
+procedure TFrmQuestions.UpdateQuestions;
+begin
+  FrmQuestions.Pergunta.Text := FrmMenu.perguntas[FrmMenu.coluna, posicaoPergunta];
+  FrmQuestions.RBA.Text := FrmMenu.respostas[FrmMenu.coluna, posicaoResposta];
+  FrmQuestions.RBB.Text := FrmMenu.respostas[FrmMenu.coluna, posicaoResposta + 1];
+  FrmQuestions.RBC.Text := FrmMenu.respostas[FrmMenu.coluna, posicaoResposta + 2];
+  FrmQuestions.RBD.Text := FrmMenu.respostas[FrmMenu.coluna, posicaoResposta + 3];
+end;
+
 procedure TFrmQuestions.BtnConfirmarClick(Sender: TObject);
 begin
-FrmResult.show;
+  if posicaoPergunta = 3 then
+  begin
+    //Mostrar Tela de Resultado
+  end
+  else if posicaoPergunta < 3 then
+  begin
+     posicaoPergunta := posicaoPergunta + 1;
+     posicaoResposta := posicaoResposta + 4;
+     FrmQuestions.UpdateQuestions;
+  end;
 end;
 
 procedure TFrmQuestions.RBAChange(Sender: TObject);

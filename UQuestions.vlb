@@ -53,13 +53,13 @@ Coordinates=96,149,49,51
 [Image6]
 Coordinates=306,141,49,51
 
-[Text1]
-Coordinates=47,149,41,51
-
 [Layout2]
 Coordinates=70,238,53,33
 
 [BtnConfirmar]
 Coordinates=306,71,80,51
 Visible=True
+
+[Pergunta]
+Coordinates=47,149,41,51
 
