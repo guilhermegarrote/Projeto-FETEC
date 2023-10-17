@@ -72,9 +72,14 @@ end;
 
 procedure TFrmQuestions.BtnConfirmarClick(Sender: TObject);
 begin
+  RBB.IsChecked:=False;
+  RBC.IsChecked:=False;
+  RBD.IsChecked:=False;
+  RBA.IsChecked:=False;
+
   if posicaoPergunta = 3 then
   begin
-    //Mostrar Tela de Resultado
+    FrmResult.Show;
   end
   else if posicaoPergunta < 3 then
   begin
