@@ -40,6 +40,7 @@ type
     procedure UpdateQuestions;
   private
   public
+    pontuacao: double;
     posicaoPergunta: integer;
     posicaoResposta: integer;
   end;
@@ -72,10 +73,27 @@ end;
 
 procedure TFrmQuestions.BtnConfirmarClick(Sender: TObject);
 begin
+  if RBA.IsChecked then
+    begin
+      pontuacao := pontuacao +  0.25;
+    end
+    else if RBB.IsChecked then
+    begin
+      pontuacao := pontuacao +  0.20;
+    end
+    else if RBC.IsChecked then
+    begin
+       pontuacao := pontuacao +  0.15;
+    end
+    else if RBD.IsChecked then
+    begin
+       pontuacao := pontuacao +  0.10;
+    end;
+
+  RBA.IsChecked:=False;
   RBB.IsChecked:=False;
   RBC.IsChecked:=False;
   RBD.IsChecked:=False;
-  RBA.IsChecked:=False;
 
   if posicaoPergunta = 3 then
   begin
