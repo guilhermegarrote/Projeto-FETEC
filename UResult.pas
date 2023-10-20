@@ -14,18 +14,24 @@ type
     LayoutCenter: TLayout;
     LayoutImage: TLayout;
     LayoutResult: TLayout;
-    LayoutText: TLayout;
     ImgIcon: TImage;
-    TextResult: TText;
-    TextExplicacao: TText;
-    LayoutBottom: TLayout;
-    Image7: TImage;
-    BtnReiniciar: TSpeedButton;
     ImgMsg: TImage;
+    TextMsgInicial: TText;
+    Image1: TImage;
+    Txt1: TText;
+    Layout1: TLayout;
+    Text1: TText;
+    LayoutBottom: TLayout;
+    Image6: TImage;
+    BtnConfirmar: TSpeedButton;
+    Text2: TText;
+    Label1: TLabel;
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
-    { Public declarations }
+    pontuacaoMaxima:double;
+    porcentagem:double;
   end;
 
 var
@@ -34,5 +40,17 @@ var
 implementation
 
 {$R *.fmx}
+
+uses UQuestions;
+
+procedure TFrmResult.FormShow(Sender: TObject);
+begin
+pontuacaoMaxima := (4*0.25);
+porcentagem:=(FrmQuestions.pontuacao/pontuacaoMaxima)*100;
+
+if (porcentagem >= 90) then
+  ImgIcon.Bitmap.LoadFromFile(ExtractFilePath(Application.PFetec) + 'emoji.png'));
+
+end;
 
 end.

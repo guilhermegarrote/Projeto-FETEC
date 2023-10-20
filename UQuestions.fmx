@@ -158,13 +158,14 @@ object FrmQuestions: TFrmQuestions
             StyledSettings = []
             Margins.Left = 20.000000000000000000
             Size.Width = 277.000000000000000000
-            Size.Height = 53.000000000000000000
+            Size.Height = 42.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
             Text = 'alternativa A'
             TextSettings.Font.Family = 'Antonio'
             TextSettings.Font.Size = 14.000000000000000000
             TextSettings.Font.StyleExt = {00020000000000000004000000}
+            TextSettings.WordWrap = True
           end
         end
       end

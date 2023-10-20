@@ -98,6 +98,7 @@ begin
   if posicaoPergunta = 3 then
   begin
     FrmResult.Show;
+
   end
   else if posicaoPergunta < 3 then
   begin
