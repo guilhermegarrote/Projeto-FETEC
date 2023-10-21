@@ -76,20 +76,20 @@ begin
   SetLength(perguntas, 4, 4);
 
   // Preencher a matriz de perguntas com strings de exemplo
-  perguntas[0, 0] := '1';
-  perguntas[0, 1] := '2';
-  perguntas[0, 2] := '3';
-  perguntas[0, 3] := '4';
+  perguntas[0, 0] := 'Um governo está considerando implementar uma lei que proíba a venda de refrigerantes em escolas.';
+  perguntas[0, 1] := 'Uma empresa está pensando em oferecer ginástica laboral para os funcionários durante o expediente.';
+  perguntas[0, 2] := 'Uma cidade está discutindo a possibilidade de proibir o uso de cigarros em espaços públicos.';
+  perguntas[0, 3] := 'Um debate surge sobre a regulamentação da venda de alimentos ultraprocessados.';
 
   perguntas[1, 0] := 'Você acredita que a prática regular de atividades físicas é importante para a saúde?';
   perguntas[1, 1] := 'Você concorda que uma boa noite de sono e a prática de técnicas de relaxamento, como a meditação, contribuem para o seu bem-estar?';
   perguntas[1, 2] := 'Você acha necessário realizar check-ups médicos regularmente, mesmo quando não está doente? ';
   perguntas[1, 3] := 'Você acredita que equilibrar o tempo entre trabalho e vida pessoal, bem como manter relacionamentos saudáveis, é crucial para uma vida plena e saudável?';
 
-  perguntas[2, 0] := 'a';
-  perguntas[2, 1] := 'a';
-  perguntas[2, 2] := 'a';
-  perguntas[2, 3] := 'a';
+  perguntas[2, 0] := 'Uma cidade está planejando a construção de um novo shopping center em uma área verde significativa.';
+  perguntas[2, 1] := 'Uma empresa deseja implementar uma política de redução de plástico, proibindo o uso de sacolas plásticas em suas lojas.';
+  perguntas[2, 2] := 'Uma comunidade está considerando a construção de uma ciclovia extensa para promover o uso de bicicletas como meio de transporte.';
+  perguntas[2, 3] := 'Um governo está avaliando a liberação da caça controlada como medida para gerenciar a população de uma espécie que ameaça outras na região.';
 
   perguntas[3, 0] := 'Você acredita que a internet facilita a comunicação entre as pessoas e fortalece os laços sociais?';
   perguntas[3, 1] := 'Você concorda que a internet é uma ferramenta poderosa para disseminar informações e conscientizar as pessoas sobre questões importantes?';
@@ -100,22 +100,22 @@ begin
   SetLength(respostas, 4, 16);
 
   // Preencher a matriz de respostas com strings de exemplo
-  respostas[0, 0] := 'a';
-  respostas[0, 1] := 'b';
-  respostas[0, 2] := 'v';
-  respostas[0, 3] := 'c';
-  respostas[0, 4] := 'd';
-  respostas[0, 5] := 's';
-  respostas[0, 6] := 'a';
-  respostas[0, 7] := 'd';
-  respostas[0, 8] := 'f';
-  respostas[0, 9] := 'w';
-  respostas[0, 10] := 'a';
-  respostas[0, 11] := 'g';
-  respostas[0, 12] := 'b';
-  respostas[0, 13] := 'v';
-  respostas[0, 14] := 's';
-  respostas[0, 15] := 's';
+  respostas[0, 0] := 'Sim, para combater a obesidade infantil e promover hábitos alimentares saudáveis.';
+  respostas[0, 1] := 'Não, isso infringe a liberdade de escolha dos alunos.';
+  respostas[0, 2] := 'Sim, desde que se ofereçam opções mais saudáveis.';
+  respostas[0, 3] := 'Não, é responsabilidade dos pais controlar a dieta de seus filhos.';
+  respostas[0, 4] := 'Sim, para melhorar a saúde dos funcionários e aumentar a produtividade.';
+  respostas[0, 5] := 'Não, isso pode interferir no tempo de trabalho efetivo.';
+  respostas[0, 6] := 'Sim, desde que a participação seja voluntária.';
+  respostas[0, 7] := 'Não, cada pessoa deve cuidar de sua saúde fora do ambiente de trabalho.';
+  respostas[0, 8] := 'Sim, para proteger não fumantes dos efeitos prejudiciais do tabagismo passivo.';
+  respostas[0, 9] := 'Não, isso viola o direito dos fumantes de escolherem seu comportamento.';
+  respostas[0, 10] := 'Sim, desde que sejam criadas áreas designadas para fumantes.';
+  respostas[0, 11] := 'Não, a educação sobre os riscos do tabagismo é suficiente.';
+  respostas[0, 12] := 'Sim, para combater problemas de saúde relacionados à alimentação não saudável.';
+  respostas[0, 13] := 'Não, cada pessoa é responsável por suas escolhas alimentares.';
+  respostas[0, 14] := 'Sim, desde que a regulamentação não seja excessivamente restritiva.';
+  respostas[0, 15] := 'Não, isso pode prejudicar a indústria alimentícia e a liberdade de escolha.';
 
   respostas[1, 0] := 'Sim, é crucial praticar atividades físicas regularmente. O exercício não só fortalece o corpo, mas também melhora o humor e reduz o estresse, contribuindo para uma vida mais saudável. ';
   respostas[1, 1] := 'Sim, cuidar da alimentação é essencial para a saúde. Uma dieta equilibrada fornece os nutrientes necessários para o funcionamento adequado do corpo, prevenindo doenças e promovendo o bem-estar.';
@@ -134,22 +134,22 @@ begin
   respostas[1, 14] := 'Não vejo como os relacionamentos podem influenciar a saúde. Cada um deve cuidar de si mesmo.';
   respostas[1, 15] := 'Não vejo problemas em dedicar a maior parte do tempo ao trabalho. Isso é o que traz realização.';
 
-  respostas[2, 0] := 'a';
-  respostas[2, 1] := 'a';
-  respostas[2, 2] := 'a';
-  respostas[2, 3] := 'a';
-  respostas[2, 4] := 'a';
-  respostas[2, 5] := 'a';
-  respostas[2, 6] := 'a';
-  respostas[2, 7] := 'a';
-  respostas[2, 8] := 'a';
-  respostas[2, 9] := 'a';
-  respostas[2, 10] := 'a';
-  respostas[2, 11] := 'a';
-  respostas[2, 12] := 'a';
-  respostas[2, 13] := 'a';
-  respostas[2, 14] := 'a';
-  respostas[2, 15] := 'a';
+  respostas[2, 0] := 'Sim, para impulsionar a economia local e criar empregos.';
+  respostas[2, 1] := 'Não, preservar a área verde é essencial para o equilíbrio ecológico.';
+  respostas[2, 2] := 'Sim, desde que haja um plano de compensação ambiental';
+  respostas[2, 3] := 'Não, é possível encontrar locais urbanos mais apropriados para o shopping.';
+  respostas[2, 4] := 'Sim, para diminuir a poluição e o impacto ambiental.';
+  respostas[2, 5] := 'Não, os clientes podem preferir a conveniência das sacolas plásticas.';
+  respostas[2, 6] := 'Sim, desde que sejam oferecidas alternativas sustentáveis.';
+  respostas[2, 7] := 'Não, a proibição pode afetar negativamente a lucratividade da empresa.';
+  respostas[2, 8] := 'Sim, para incentivar um estilo de vida saudável e reduzir a emissão de gases.';
+  respostas[2, 9] := 'Não, a construção pode causar perturbações no trânsito atual.';
+  respostas[2, 10] := 'Sim, desde que haja investimento em educação sobre segurança no trânsito.';
+  respostas[2, 11] := 'Não, o dinheiro pode ser melhor utilizado em outras necessidades da comunidade.';
+  respostas[2, 12] := 'Sim, a caça controlada é uma solução eficaz para manter o equilíbrio ecológico.';
+  respostas[2, 13] := 'Não, existem métodos mais éticos de controle populacional.';
+  respostas[2, 14] := 'Sim, desde que seja estritamente regulamentada para evitar abusos.';
+  respostas[2, 15] := 'Não, a intervenção humana pode ter consequências imprevisíveis no ecossistema.';
 
   respostas[3, 0] := 'Sim, a internet permite que as pessoas se comuniquem instantaneamente, o que fortalece os laços sociais, conectando amigos e familiares independentemente da distância.';
   respostas[3, 1] := 'Sim, as redes sociais e plataformas online são espaços onde as pessoas podem compartilhar experiências e se apoiar, contribuindo para uma comunidade mais unida.';

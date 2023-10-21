@@ -95,6 +95,10 @@ begin
   else if RBD.IsChecked then
   begin
     pontuacao := pontuacao + 0.10;
+  end
+  else
+  begin
+    exit;
   end;
 
   RBA.IsChecked := False;
