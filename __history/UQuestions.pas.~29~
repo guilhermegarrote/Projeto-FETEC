@@ -106,7 +106,7 @@ begin
   begin
     pontuacaoMaxima := (4 * 0.25);
     porcentagem := (pontuacao / pontuacaoMaxima) * 100;
-    if ((porcentagem >= 90) and (porcentagem<=100)) then
+    if (porcentagem >= 90) then
     begin
       FrmResult1.TextPercent.Text := FloatToStr(porcentagem) + '%';
       FrmResult1.Show;
