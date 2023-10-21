@@ -195,8 +195,20 @@
             <Form>FrmQuestions</Form>
             <FormType>fmx</FormType>
         </DCCReference>
-        <DCCReference Include="UResult.pas">
-            <Form>FrmResult</Form>
+        <DCCReference Include="UResult1.pas">
+            <Form>FrmResult1</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="UResult2.pas">
+            <Form>FrmResult2</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="UResult3.pas">
+            <Form>FrmResult3</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="UResult4.pas">
+            <Form>FrmResult4</Form>
             <FormType>fmx</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">
@@ -239,6 +251,18 @@
                 <DeployFile LocalName="Win32\Debug\PFetec.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>PFetec.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="Win64\Debug\PFetec.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win64">
+                        <RemoteName>PFetec.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="Win64\Debug\PFetec.rsm" Configuration="Debug" Class="DebugSymbols">
+                    <Platform Name="Win64">
+                        <RemoteName>PFetec.rsm</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
