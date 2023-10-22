@@ -17,21 +17,24 @@ type
     LayoutCenter: TLayout;
     LayoutBottom: TLayout;
     LytA: TLayout;
-    Layout2: TLayout;
     Layout3: TLayout;
     Layout4: TLayout;
-    Image2: TImage;
     Image1: TImage;
     Pergunta: TText;
-    RBA: TRadioButton;
-    Image3: TImage;
-    RBB: TRadioButton;
-    Image4: TImage;
-    RBC: TRadioButton;
-    Image5: TImage;
-    RBD: TRadioButton;
     Image6: TImage;
     BtnConfirmar: TSpeedButton;
+    Layout1: TLayout;
+    Image2: TImage;
+    RBA: TRadioButton;
+    Layout5: TLayout;
+    Image3: TImage;
+    Layout6: TLayout;
+    Image4: TImage;
+    Layout2: TLayout;
+    Image5: TImage;
+    RBD: TRadioButton;
+    RBC: TRadioButton;
+    RBB: TRadioButton;
     procedure RBAChange(Sender: TObject);
     procedure RBBChange(Sender: TObject);
     procedure RBCChange(Sender: TObject);
@@ -67,15 +70,11 @@ end;
 
 procedure TFrmQuestions.UpdateQuestions;
 begin
-  FrmQuestions.Pergunta.Text := FrmMenu.perguntas[FrmMenu.coluna,
-    posicaoPergunta];
+  FrmQuestions.Pergunta.Text := FrmMenu.perguntas[FrmMenu.coluna, posicaoPergunta];
   FrmQuestions.RBA.Text := FrmMenu.respostas[FrmMenu.coluna, posicaoResposta];
-  FrmQuestions.RBB.Text := FrmMenu.respostas[FrmMenu.coluna,
-    posicaoResposta + 1];
-  FrmQuestions.RBC.Text := FrmMenu.respostas[FrmMenu.coluna,
-    posicaoResposta + 2];
-  FrmQuestions.RBD.Text := FrmMenu.respostas[FrmMenu.coluna,
-    posicaoResposta + 3];
+  FrmQuestions.RBB.Text := FrmMenu.respostas[FrmMenu.coluna, posicaoResposta + 1];
+  FrmQuestions.RBC.Text := FrmMenu.respostas[FrmMenu.coluna, posicaoResposta + 2];
+  FrmQuestions.RBD.Text := FrmMenu.respostas[FrmMenu.coluna, posicaoResposta + 3];
 end;
 
 procedure TFrmQuestions.BtnConfirmarClick(Sender: TObject);
@@ -123,12 +122,10 @@ begin
   begin
     exit;
   end;
-
   RBA.IsChecked := False;
   RBB.IsChecked := False;
   RBC.IsChecked := False;
   RBD.IsChecked := False;
-
   if posicaoPergunta = 3 then
   begin
     pontuacaoMaxima := (4 * 0.25);

@@ -11,50 +11,23 @@ Coordinates=10,78,80,33
 Coordinates=134,10,84,33
 
 []
-Coordinates=217,149,82,33
+Coordinates=70,238,53,33
 Visible=True
-
-[RBC]
-Coordinates=0,116,40,33
 
 [LytA]
 Coordinates=256,1,40,33
 
-[Image4]
-Coordinates=306,1,49,51
-
-[Image5]
-Coordinates=155,130,49,51
-
 [Layout4]
 Coordinates=306,211,53,33
 
-[RBD]
-Coordinates=256,201,40,33
-
-[Image3]
-Coordinates=68,1,49,51
-
-[RBA]
-Coordinates=237,238,40,33
-
 [Layout3]
 Coordinates=178,238,53,33
-
-[RBB]
-Coordinates=129,238,40,33
-
-[Image2]
-Coordinates=0,0,49,51
 
 [Image1]
 Coordinates=96,149,49,51
 
 [Image6]
 Coordinates=306,141,49,51
-
-[Layout2]
-Coordinates=70,238,53,33
 
 [BtnConfirmar]
 Coordinates=306,71,80,51

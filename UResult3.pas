@@ -28,6 +28,8 @@ type
     ImgBackBtn: TImage;
     BtnConfirmar: TSpeedButton;
     TextText: TText;
+    Text1: TText;
+    procedure BtnConfirmarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -40,5 +42,16 @@ var
 implementation
 
 {$R *.fmx}
+
+uses UMenu;
+
+procedure TFrmResult3.BtnConfirmarClick(Sender: TObject);
+begin
+FrmResult3.Close;
+FrmMenu.EducacaoApertado.Visible:=false;
+FrmMenu.SaudeApertado.Visible:=false;
+FrmMenu.MeioAmbienteApertado.Visible:=false;
+FrmMenu.SociedadeApertado.Visible:=false;
+end;
 
 end.

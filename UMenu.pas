@@ -28,32 +28,37 @@ type
     Image7: TImage;
     Image8: TImage;
     Layout6: TLayout;
-    RecSaude: TRectangle;
     FndSaude: TImage;
     TextSaude: TImage;
     BtnJogar: TSpeedButton;
     BtnSaude: TButton;
     Layout7: TLayout;
-    RecEducacao: TRectangle;
     FndEducacao: TImage;
-    TextEducacao: TImage;
     BtnEducacao: TButton;
     Layout8: TLayout;
-    RecMeioAmbiente: TRectangle;
     FundoMeioAmbiente: TImage;
     TextMeioAmbiente: TImage;
     BtnMeioAmbiente: TButton;
     LayoutSociedade: TLayout;
-    RecSociedade: TRectangle;
     FundoSociedade: TImage;
     TextSociedade: TImage;
     BtnSociedade: TButton;
+    TextEducacao: TImage;
+    EducacaoApertado: TImage;
+    TextEducacaoApertado: TImage;
+    SaudeApertado: TImage;
+    TextSaudeApertado: TImage;
+    MeioAmbienteApertado: TImage;
+    TextMeioAmbienteApertado: TImage;
+    SociedadeApertado: TImage;
+    TextSocidadeAperto: TImage;
     procedure InicializarMatrizes;
     procedure BtnSaudeClick(Sender: TObject);
     procedure BtnEducacaoClick(Sender: TObject);
     procedure BtnMeioAmbienteClick(Sender: TObject);
     procedure BtnSociedadeClick(Sender: TObject);
     procedure BtnJogarClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
   public
     perguntas: array of array of string;
@@ -76,10 +81,10 @@ begin
   SetLength(perguntas, 4, 4);
 
   // Preencher a matriz de perguntas com strings de exemplo
-  perguntas[0, 0] := 'Um governo está considerando implementar uma lei que proíba a venda de refrigerantes em escolas.';
-  perguntas[0, 1] := 'Uma empresa está pensando em oferecer ginástica laboral para os funcionários durante o expediente.';
-  perguntas[0, 2] := 'Uma cidade está discutindo a possibilidade de proibir o uso de cigarros em espaços públicos.';
-  perguntas[0, 3] := 'Um debate surge sobre a regulamentação da venda de alimentos ultraprocessados.';
+  perguntas[0, 0] := 'Você é a favor de uma possível lei que proíba a venda de refrigerantes nas escolas?.';
+  perguntas[0, 1] := 'Você acha que todas as empresas deveriam oferecer um tempo para ginástica laboral aos funcionários?';
+  perguntas[0, 2] := 'Uma cidade está discutindo a possibilidade de proibir o uso de cigarros em espaços públicos. Você apoia?';
+  perguntas[0, 3] := 'Um debate surge sobre a regulamentação da venda de alimentos ultraprocessados. Você vota a favor?';
 
   perguntas[1, 0] := 'Você acredita que a prática regular de atividades físicas é importante para a saúde?';
   perguntas[1, 1] := 'Você concorda que uma boa noite de sono e a prática de técnicas de relaxamento, como a meditação, contribuem para o seu bem-estar?';
@@ -117,20 +122,20 @@ begin
   respostas[0, 14] := 'Sim, desde que a regulamentação não seja excessivamente restritiva.';
   respostas[0, 15] := 'Não, isso pode prejudicar a indústria alimentícia e a liberdade de escolha.';
 
-  respostas[1, 0] := 'Sim, é crucial praticar atividades físicas regularmente. O exercício não só fortalece o corpo, mas também melhora o humor e reduz o estresse, contribuindo para uma vida mais saudável. ';
-  respostas[1, 1] := 'Sim, cuidar da alimentação é essencial para a saúde. Uma dieta equilibrada fornece os nutrientes necessários para o funcionamento adequado do corpo, prevenindo doenças e promovendo o bem-estar.';
+  respostas[1, 0] := 'Sim, praticar exercícios regularmente é crucial, fortalece o corpo, melhora o humor e reduz o estresse para uma vida mais saudável. ';
+  respostas[1, 1] := 'Sim, cuidar da alimentação é vital. Uma dieta equilibrada fornece nutrientes, prevenindo doenças e promovendo o bem-estar.';
   respostas[1, 2] := 'Não acho necessário se preocupar com exercícios. O importante é aproveitar a vida, sem se preocupar com atividades físicas.';
   respostas[1, 3] := 'Não vejo como a alimentação está relacionada à saúde. Comer o que gosto me faz feliz, e isso é o que importa.';
-  respostas[1, 4] := 'Sim, dormir o suficiente é fundamental para o bom funcionamento do corpo e da mente. Uma boa noite de sono contribui para a recuperação física e mental, promovendo a saúde e o bem-estar.';
-  respostas[1, 5] := 'Sim, é importante reservar tempo para relaxar e desestressar. Práticas como a meditação podem melhorar a saúde mental, reduzir a ansiedade e promover um equilíbrio emocional.';
+  respostas[1, 4] := 'Sim, ter um sono adequado promove saúde e bem-estar através da recuperação física e mental durante a noite.';
+  respostas[1, 5] := 'Sim, é crucial reservar tempo para relaxar. A meditação por exemplo melhora a saúde mental e promove equilíbrio emocional.';
   respostas[1, 6] := 'Não vejo a necessidade de dormir tanto. Prefiro aproveitar a noite com atividades divertidas.';
   respostas[1, 7] := 'Não acredito em métodos como a meditação. Não vejo como sentar-se quieto pode fazer diferença na saúde.';
-  respostas[1, 8] := 'Sim, é importante fazer check-ups médicos regularmente. Essas visitas ajudam na detecção precoce de problemas de saúde, permitindo tratamentos mais eficazes e contribuindo para uma vida mais saudável.';
-  respostas[1, 9] := 'Sim, a prevenção é a chave para uma vida saudável. Adotar medidas preventivas, como vacinação e hábitos saudáveis, pode evitar doenças e melhorar a qualidade de vida.';
+  respostas[1, 8] := 'Sim, check-ups regulares detectam problemas de saúde precocemente, permitindo tratamentos eficazes para uma vida mais saudável.';
+  respostas[1, 9] := 'Sim, prevenção é crucial. Vacinação e hábitos saudáveis evitam doenças, melhorando a qualidade de vida.';
   respostas[1, 10] := 'Não vejo por que deveria ir ao médico se não estou doente. Isso só faz sentido quando há problemas.';
   respostas[1, 11] := 'Não confio muito na medicina preventiva. Acho que o corpo se cura naturalmente. ';
-  respostas[1, 12] := 'Sim, manter relacionamentos saudáveis é crucial para o bem-estar emocional. O apoio social pode ajudar a lidar com o estresse e promover uma sensação de pertencimento e felicidade. ';
-  respostas[1, 13] := 'Sim, é importante equilibrar o trabalho e a vida pessoal. O excesso de trabalho pode levar ao esgotamento, afetando negativamente a saúde física e mental.';
+  respostas[1, 12] := 'Sim, relacionamentos saudáveis são cruciais para o bem-estar emocional. Apoio social ajuda a lidar com o estresse, promovendo felicidade.';
+  respostas[1, 13] := 'Sim, equilibrar trabalho e vida pessoal é essencial. O excesso de trabalho pode causar esgotamento, afetando a saúde física e mental.';
   respostas[1, 14] := 'Não vejo como os relacionamentos podem influenciar a saúde. Cada um deve cuidar de si mesmo.';
   respostas[1, 15] := 'Não vejo problemas em dedicar a maior parte do tempo ao trabalho. Isso é o que traz realização.';
 
@@ -151,11 +156,11 @@ begin
   respostas[2, 14] := 'Sim, desde que seja estritamente regulamentada para evitar abusos.';
   respostas[2, 15] := 'Não, a intervenção humana pode ter consequências imprevisíveis no ecossistema.';
 
-  respostas[3, 0] := 'Sim, a internet permite que as pessoas se comuniquem instantaneamente, o que fortalece os laços sociais, conectando amigos e familiares independentemente da distância.';
-  respostas[3, 1] := 'Sim, as redes sociais e plataformas online são espaços onde as pessoas podem compartilhar experiências e se apoiar, contribuindo para uma comunidade mais unida.';
+  respostas[3, 0] := 'Sim, internet facilita a comunicação instantânea, fortalecendo laços sociais entre amigos e familiares, independentemente da distância.';
+  respostas[3, 1] := 'Sim, redes sociais e plataformas online são espaços para compartilhar experiências e apoio, contribuindo para uma comunidade mais unida.';
   respostas[3, 2] := 'Não acho que a internet contribua para a comunicação. Muitas vezes, as interações online são superficiais e não têm significado real.';
   respostas[3, 3] := 'Não vejo como a internet pode fortalecer laços sociais. Ela pode, na verdade, isolar as pessoas do mundo real.';
-  respostas[3, 4] := 'Sim, a internet é uma poderosa ferramenta de disseminação de informações. Permite a conscientização sobre questões sociais, promovendo mudanças positivas na sociedade.';
+  respostas[3, 4] := 'Sim, an internet é poderosa para disseminar informações, conscientizando sobre questões sociais e promovendo mudanças positivas na sociedade.';
   respostas[3, 5] := 'Sim, plataformas online oferecem espaço para discussões abertas e compartilhamento de perspectivas, criando uma consciência coletiva sobre diversos problemas.';
   respostas[3, 6] := 'Não acredito que a internet tenha impacto na conscientização. Muitas informações são distorcidas, e as pessoas não conseguem discernir o que é verdadeiro. ';
   respostas[3, 7] := 'Não vejo como a internet pode ser eficaz na conscientização. As pessoas geralmente ignoram informações importantes online.';
@@ -171,60 +176,68 @@ end;
 
 procedure TFrmMenu.BtnEducacaoClick(Sender: TObject);
 begin
-  if ((RecSaude.Visible = True) or (RecMeioAmbiente.Visible = True) or
-    (RecSociedade.Visible = True)) then
+  if ((SaudeApertado.Visible = True) or (MeioAmbienteApertado.Visible = True) or
+    (SociedadeApertado.Visible = True)) then
   begin
-    RecSaude.Visible := False;
-    RecMeioAmbiente.Visible := False;
-    RecSociedade.Visible := False;
+    SaudeApertado.Visible := False;
+    MeioAmbienteApertado.Visible := False;
+    SociedadeApertado.Visible := False;
   end;
-  RecEducacao.Visible := True;
+  EducacaoApertado.Visible := True;
   coluna := 0;
 end;
 
 procedure TFrmMenu.BtnSaudeClick(Sender: TObject);
 begin
-  if ((RecEducacao.Visible = True) or (RecMeioAmbiente.Visible = True) or
-    (RecSociedade.Visible = True)) then
+  if ((EducacaoApertado.Visible = True) or (MeioAmbienteApertado.Visible = True) or
+    (SociedadeApertado.Visible = True)) then
   begin
-    RecEducacao.Visible := False;
-    RecMeioAmbiente.Visible := False;
-    RecSociedade.Visible := False;
+    EducacaoApertado.Visible := False;
+    MeioAmbienteApertado.Visible := False;
+    SociedadeApertado.Visible := False;
   end;
-  RecSaude.Visible := True;
+  SaudeApertado.Visible := True;
   coluna := 1;
 end;
 
 procedure TFrmMenu.BtnMeioAmbienteClick(Sender: TObject);
 begin
-  if ((RecSaude.Visible = True) or (RecEducacao.Visible = True) or
-    (RecSociedade.Visible = True)) then
+  if ((SaudeApertado.Visible = True) or (EducacaoApertado.Visible = True) or
+    (SociedadeApertado.Visible = True)) then
   begin
-    RecSaude.Visible := False;
-    RecEducacao.Visible := False;
-    RecSociedade.Visible := False;
+    SaudeApertado.Visible := False;
+    EducacaoApertado.Visible := False;
+    SociedadeApertado.Visible := False;
   end;
-  RecMeioAmbiente.Visible := True;
+  MeioAmbienteApertado.Visible := True;
   coluna := 2;
 end;
 
 procedure TFrmMenu.BtnSociedadeClick(Sender: TObject);
 begin
-  if ((RecSaude.Visible = True) or (RecMeioAmbiente.Visible = True) or
-    (RecEducacao.Visible = True)) then
+  if ((SaudeApertado.Visible = True) or (MeioAmbienteApertado.Visible = True) or
+    (EducacaoApertado.Visible = True)) then
   begin
-    RecSaude.Visible := False;
-    RecMeioAmbiente.Visible := False;
-    RecEducacao.Visible := False;
+    SaudeApertado.Visible := False;
+    MeioAmbienteApertado.Visible := False;
+    EducacaoApertado.Visible := False;
   end;
-  RecSociedade.Visible := True;
+  SociedadeApertado.Visible := True;
   coluna := 3;
+end;
+
+procedure TFrmMenu.FormShow(Sender: TObject);
+begin
+SaudeApertado.Visible:=False;
+EducacaoApertado.Visible:=False;
+SociedadeApertado.Visible:=False;
+MeioAmbienteApertado.Visible:=False;
 end;
 
 procedure TFrmMenu.BtnJogarClick(Sender: TObject);
 begin
-  if ((RecSaude.Visible = True) or (RecEducacao.Visible = True) or
-    (RecSociedade.Visible = True)) or (RecMeioAmbiente.Visible = True) then
+  if ((SaudeApertado.Visible = True) or (EducacaoApertado.Visible = True) or
+    (SociedadeApertado.Visible = True)) or (MeioAmbienteApertado.Visible = True) then
   begin
     FrmQuestions.posicaoPergunta := 0;
     InicializarMatrizes;
