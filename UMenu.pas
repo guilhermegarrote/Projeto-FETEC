@@ -226,6 +226,7 @@ begin
   if ((RecSaude.Visible = True) or (RecEducacao.Visible = True) or
     (RecSociedade.Visible = True)) or (RecMeioAmbiente.Visible = True) then
   begin
+    FrmQuestions.posicaoPergunta := 0;
     InicializarMatrizes;
     FrmQuestions.ExecuteQuestions;
   end;

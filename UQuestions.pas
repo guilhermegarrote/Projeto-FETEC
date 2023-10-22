@@ -80,7 +80,30 @@ end;
 
 procedure TFrmQuestions.BtnConfirmarClick(Sender: TObject);
 begin
-  if RBA.IsChecked then
+  if posicaoPergunta = 0 then
+    begin
+      if RBA.IsChecked then
+    begin
+      pontuacao := 0.25;
+    end
+    else if RBB.IsChecked then
+    begin
+      pontuacao := 0.20;
+    end
+    else if RBC.IsChecked then
+    begin
+      pontuacao := 0.15;
+    end
+    else if RBD.IsChecked then
+    begin
+      pontuacao := 0.10;
+    end
+    else
+    begin
+      exit;
+    end;
+  end
+  else if RBA.IsChecked then
   begin
     pontuacao := pontuacao + 0.25;
   end
@@ -129,9 +152,8 @@ begin
     begin
       FrmResult4.TextPercent.Text := FloatToStr(porcentagem) + '%';
       FrmResult4.Show;
-    end
-
-
+    end;
+    posicaoPergunta := 0;
   end
   else if posicaoPergunta < 3 then
   begin
