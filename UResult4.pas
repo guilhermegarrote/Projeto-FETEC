@@ -52,6 +52,7 @@ FrmMenu.EducacaoApertado.Visible:=false;
 FrmMenu.SaudeApertado.Visible:=false;
 FrmMenu.MeioAmbienteApertado.Visible:=false;
 FrmMenu.SociedadeApertado.Visible:=false;
+FrmMenu.LblAlert.Visible:=False;
 end;
 
 end.

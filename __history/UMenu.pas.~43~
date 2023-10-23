@@ -161,11 +161,11 @@ begin
   respostas[3, 1] := 'Sim, redes sociais e plataformas online são espaços para compartilhar experiências e apoio, contribuindo para uma comunidade mais unida.';
   respostas[3, 2] := 'Não acho que a internet contribua para a comunicação. Muitas vezes, as interações online são superficiais e não têm significado real.';
   respostas[3, 3] := 'Não vejo como a internet pode fortalecer laços sociais. Ela pode, na verdade, isolar as pessoas do mundo real.';
-  respostas[3, 4] := 'Sim, a internet ajuda a disseminar informações, conscientizando e promovendo mudanças significativas na sociedade.';
-  respostas[3, 5] := 'Sim, plataformas online permitem discussões e compartilhamento de perspectivas, gerando consciência coletiva sobre diversos problemas.';
-  respostas[3, 6] := 'Não vejo a internet impactando na conscientização. Muitas informações são distorcidas, dificultando diferir a verdade da mentira. ';
+  respostas[3, 4] := 'Sim, an internet é poderosa para disseminar informações, conscientizando sobre questões sociais e promovendo mudanças positivas na sociedade.';
+  respostas[3, 5] := 'Sim, plataformas online oferecem espaço para discussões abertas e compartilhamento de perspectivas, criando uma consciência coletiva sobre diversos problemas.';
+  respostas[3, 6] := 'Não acredito que a internet tenha impacto na conscientização. Muitas informações são distorcidas, e as pessoas não conseguem discernir o que é verdadeiro. ';
   respostas[3, 7] := 'Não vejo como a internet pode ser eficaz na conscientização. As pessoas geralmente ignoram informações importantes online.';
-  respostas[3, 8] := 'Sim, a internet cria bolhas informativas, expondo as pessoas a perspectivas semelhantes, intensificando a polarização e os conflitos.';
+  respostas[3, 8] := 'Sim, a internet cria bolhas informativas, onde as pessoas são expostas apenas a perspectivas semelhantes, o que intensifica a polarização e os conflitos.';
   respostas[3, 9] := 'Sim, as redes sociais muitas vezes amplificam opiniões extremas, criando divisões na sociedade e aumentando o risco de conflitos. ';
   respostas[3, 10] := 'Não acredito que a internet tenha impacto na polarização. As pessoas têm escolhas e podem buscar informações diversas se quiserem.';
   respostas[3, 11] := 'Não vejo como as redes sociais poderiam contribuir para conflitos. Elas são apenas plataformas de expressão individual.';

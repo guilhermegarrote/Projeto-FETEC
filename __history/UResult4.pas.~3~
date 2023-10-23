@@ -1,4 +1,4 @@
-unit UResult2;
+unit UResult4;
 
 interface
 
@@ -8,7 +8,7 @@ uses
   FMX.Controls.Presentation, FMX.Objects, FMX.Layouts;
 
 type
-  TFrmResult2 = class(TForm)
+  TFrmResult4 = class(TForm)
     LayoutMain: TLayout;
     LayoutTop: TLayout;
     ImgMsg: TImage;
@@ -37,7 +37,7 @@ type
   end;
 
 var
-  FrmResult2: TFrmResult2;
+  FrmResult4: TFrmResult4;
 
 implementation
 
@@ -45,14 +45,13 @@ implementation
 
 uses UMenu;
 
-procedure TFrmResult2.BtnConfirmarClick(Sender: TObject);
+procedure TFrmResult4.BtnConfirmarClick(Sender: TObject);
 begin
-FrmResult2.Close;
+FrmResult4.Close;
 FrmMenu.EducacaoApertado.Visible:=false;
 FrmMenu.SaudeApertado.Visible:=false;
 FrmMenu.MeioAmbienteApertado.Visible:=false;
 FrmMenu.SociedadeApertado.Visible:=false;
-FrmMenu.LblAlert.Visible:=False;
 end;
 
 end.

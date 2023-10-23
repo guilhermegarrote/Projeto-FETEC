@@ -35,6 +35,7 @@ type
     RBD: TRadioButton;
     RBC: TRadioButton;
     RBB: TRadioButton;
+    LblAlert: TLabel;
     procedure RBAChange(Sender: TObject);
     procedure RBBChange(Sender: TObject);
     procedure RBCChange(Sender: TObject);
@@ -79,23 +80,33 @@ end;
 
 procedure TFrmQuestions.BtnConfirmarClick(Sender: TObject);
 begin
+  if (RBA.IsChecked=False) and (RBB.IsChecked=False) and
+  (RBC.IsChecked=false) and(RBD.IsChecked=False) then
+  begin
+    LblAlert.Visible:=True
+  end;
+
   if posicaoPergunta = 0 then
     begin
       if RBA.IsChecked then
     begin
       pontuacao := 0.25;
+      LblAlert.Visible:=False;
     end
     else if RBB.IsChecked then
     begin
       pontuacao := 0.20;
+      LblAlert.Visible:=False;
     end
     else if RBC.IsChecked then
     begin
       pontuacao := 0.15;
+      LblAlert.Visible:=False;
     end
     else if RBD.IsChecked then
     begin
       pontuacao := 0.10;
+      LblAlert.Visible:=False;
     end
     else
     begin
@@ -105,18 +116,22 @@ begin
   else if RBA.IsChecked then
   begin
     pontuacao := pontuacao + 0.25;
+    LblAlert.Visible:=False;
   end
   else if RBB.IsChecked then
   begin
     pontuacao := pontuacao + 0.20;
+    LblAlert.Visible:=False;
   end
   else if RBC.IsChecked then
   begin
     pontuacao := pontuacao + 0.15;
+    LblAlert.Visible:=False;
   end
   else if RBD.IsChecked then
   begin
     pontuacao := pontuacao + 0.10;
+    LblAlert.Visible:=False;
   end
   else
   begin
@@ -134,21 +149,25 @@ begin
     begin
       FrmResult1.TextPercent.Text := FloatToStr(porcentagem) + '%';
       FrmResult1.Show;
+      FrmQuestions.Close;
     end
     else if (porcentagem >= 70) then
     begin
       FrmResult2.TextPercent.Text := FloatToStr(porcentagem) + '%';
       FrmResult2.Show;
+      FrmQuestions.Close;
     end
     else if (porcentagem >= 50) then
     begin
       FrmResult3.TextPercent.Text := FloatToStr(porcentagem) + '%';
       FrmResult3.Show;
+      FrmQuestions.Close;
     end
     else
     begin
       FrmResult4.TextPercent.Text := FloatToStr(porcentagem) + '%';
       FrmResult4.Show;
+      FrmQuestions.Close;
     end;
     posicaoPergunta := 0;
   end
