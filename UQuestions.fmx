@@ -160,6 +160,7 @@ object FrmQuestions: TFrmQuestions
               object RBA: TRadioButton
                 Align = Center
                 StyledSettings = []
+                GroupName = 'Alternativas'
                 Margins.Left = 20.000000000000000000
                 Size.Width = 279.000000000000000000
                 Size.Height = 67.000000000000000000
@@ -169,7 +170,6 @@ object FrmQuestions: TFrmQuestions
                 TextSettings.Font.Family = 'Bahnschrift'
                 TextSettings.Font.Size = 13.000000000000000000
                 TextSettings.WordWrap = True
-                OnChange = RBAChange
               end
             end
           end
@@ -225,6 +225,7 @@ object FrmQuestions: TFrmQuestions
               object RBD: TRadioButton
                 Align = Center
                 StyledSettings = []
+                GroupName = 'Alternativas'
                 Margins.Left = 20.000000000000000000
                 Size.Width = 277.000000000000000000
                 Size.Height = 62.000000000000000000
@@ -289,6 +290,7 @@ object FrmQuestions: TFrmQuestions
               object RBC: TRadioButton
                 Align = Center
                 StyledSettings = []
+                GroupName = 'Alternativas'
                 Margins.Left = 20.000000000000000000
                 Size.Width = 277.000000000000000000
                 Size.Height = 68.000000000000000000
@@ -353,6 +355,7 @@ object FrmQuestions: TFrmQuestions
               object RBB: TRadioButton
                 Align = Center
                 StyledSettings = []
+                GroupName = 'Alternativas'
                 Margins.Left = 20.000000000000000000
                 Size.Width = 277.000000000000000000
                 Size.Height = 66.000000000000000000

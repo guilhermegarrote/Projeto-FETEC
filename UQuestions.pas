@@ -37,10 +37,6 @@ type
     LayoutTop: TLayout;
     Image1: TImage;
     Pergunta: TText;
-    procedure RBAChange(Sender: TObject);
-    procedure RBBChange(Sender: TObject);
-    procedure RBCChange(Sender: TObject);
-    procedure RBDChange(Sender: TObject);
     procedure BtnConfirmarClick(Sender: TObject);
     procedure ExecuteQuestions;
     procedure UpdateQuestions;
@@ -177,50 +173,6 @@ begin
     posicaoPergunta := posicaoPergunta + 1;
     posicaoResposta := posicaoResposta + 4;
     FrmQuestions.UpdateQuestions;
-  end;
-end;
-
-procedure TFrmQuestions.RBAChange(Sender: TObject);
-begin
-  if (RBB.IsChecked) or (RBC.IsChecked) or (RBD.IsChecked) then
-  begin
-    RBB.IsChecked := False;
-    RBC.IsChecked := False;
-    RBD.IsChecked := False;
-    RBA.IsChecked := True;
-  end;
-end;
-
-procedure TFrmQuestions.RBBChange(Sender: TObject);
-begin
-  if (RBA.IsChecked) or (RBC.IsChecked) or (RBD.IsChecked) then
-  begin
-    RBA.IsChecked := False;
-    RBC.IsChecked := False;
-    RBD.IsChecked := False;
-    RBB.IsChecked := True;
-  end;
-end;
-
-procedure TFrmQuestions.RBCChange(Sender: TObject);
-begin
-  if (RBB.IsChecked) or (RBA.IsChecked) or (RBD.IsChecked) then
-  begin
-    RBB.IsChecked := False;
-    RBA.IsChecked := False;
-    RBD.IsChecked := False;
-    RBC.IsChecked := True;
-  end;
-end;
-
-procedure TFrmQuestions.RBDChange(Sender: TObject);
-begin
-  if (RBB.IsChecked) or (RBC.IsChecked) or (RBA.IsChecked) then
-  begin
-    RBB.IsChecked := False;
-    RBC.IsChecked := False;
-    RBA.IsChecked := False;
-    RBD.IsChecked := True;
   end;
 end;
 
