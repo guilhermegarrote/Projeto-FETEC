@@ -10,9 +10,12 @@ uses
 type
   TFrmResult1 = class(TForm)
     LayoutMain: TLayout;
-    LayoutTop: TLayout;
-    ImgMsg: TImage;
-    TextMsgInicial: TText;
+    Layout1: TLayout;
+    LayoutBottom: TLayout;
+    ImgBackBtn: TImage;
+    BtnConfirmar: TSpeedButton;
+    TextText: TText;
+    Text1: TText;
     LayoutCenter: TLayout;
     LayoutImage: TLayout;
     ImgIcon: TImage;
@@ -24,11 +27,9 @@ type
     LblVc: TLabel;
     Layout3: TLayout;
     TextCons: TText;
-    LayoutBottom: TLayout;
-    ImgBackBtn: TImage;
-    BtnConfirmar: TSpeedButton;
-    TextText: TText;
-    Text1: TText;
+    LayoutTop: TLayout;
+    ImgMsg: TImage;
+    TextMsgInicial: TText;
     procedure BtnConfirmarClick(Sender: TObject);
   private
     { Private declarations }
