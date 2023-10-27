@@ -61,6 +61,8 @@ type
     procedure BtnSociedadeClick(Sender: TObject);
     procedure BtnJogarClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char;
+      Shift: TShiftState);
   private
   public
     perguntas: array of array of string;
@@ -226,6 +228,15 @@ begin
   end;
   SociedadeApertado.Visible := True;
   coluna := 3;
+end;
+
+procedure TFrmMenu.FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char;
+  Shift: TShiftState);
+begin
+if(Key=vkHardwareBack) then
+  begin
+    Key:=0;
+  end;
 end;
 
 procedure TFrmMenu.FormShow(Sender: TObject);

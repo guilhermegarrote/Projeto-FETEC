@@ -14,6 +14,7 @@ uses
 
 begin
   Application.Initialize;
+  Application.FormFactor.Orientations := [TFormOrientation.Portrait];
   Application.CreateForm(TFrmMenu, FrmMenu);
   Application.CreateForm(TFrmQuestions, FrmQuestions);
   Application.CreateForm(TFrmResult1, FrmResult1);

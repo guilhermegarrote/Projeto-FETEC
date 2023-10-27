@@ -31,6 +31,8 @@ type
     ImgMsg: TImage;
     TextMsgInicial: TText;
     procedure BtnConfirmarClick(Sender: TObject);
+    procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char;
+      Shift: TShiftState);
   private
     { Private declarations }
   public
@@ -54,6 +56,15 @@ FrmMenu.SaudeApertado.Visible:=false;
 FrmMenu.MeioAmbienteApertado.Visible:=false;
 FrmMenu.SociedadeApertado.Visible:=false;
 FrmMenu.LblAlert.Visible:=False;
+end;
+
+procedure TFrmResult1.FormKeyUp(Sender: TObject; var Key: Word;
+  var KeyChar: Char; Shift: TShiftState);
+begin
+  if(Key=vkHardwareBack) then
+  begin
+    Key:=0;
+  end;
 end;
 
 end.

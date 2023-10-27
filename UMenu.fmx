@@ -13,6 +13,7 @@ object FrmMenu: TFrmMenu
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnKeyUp = FormKeyUp
   OnShow = FormShow
   DesignerMasterStyle = 3
   object LayoutMain: TLayout

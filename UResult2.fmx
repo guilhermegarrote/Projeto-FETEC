@@ -12,6 +12,7 @@ object FrmResult2: TFrmResult2
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnKeyUp = FormKeyUp
   DesignerMasterStyle = 0
   object LayoutMain: TLayout
     Align = Client
@@ -28,9 +29,8 @@ object FrmResult2: TFrmResult2
       object LayoutBottom: TLayout
         Align = Top
         Margins.Top = 30.000000000000000000
-        Position.X = -2.000000000000000000
         Position.Y = 391.000000000000000000
-        Size.Width = 344.000000000000000000
+        Size.Width = 342.000000000000000000
         Size.Height = 183.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 2
@@ -69,14 +69,14 @@ object FrmResult2: TFrmResult2
             end>
           Align = Bottom
           Position.Y = 124.000000000000000000
-          Size.Width = 344.000000000000000000
+          Size.Width = 342.000000000000000000
           Size.Height = 59.000000000000000000
           Size.PlatformDefault = False
           object BtnConfirmar: TSpeedButton
             Align = Client
             StyledSettings = []
             Margins.Bottom = 10.000000000000000000
-            Size.Width = 344.000000000000000000
+            Size.Width = 342.000000000000000000
             Size.Height = 49.000000000000000000
             Size.PlatformDefault = False
             Text = 'CONFIRMAR'
@@ -93,7 +93,7 @@ object FrmResult2: TFrmResult2
           Margins.Right = 70.000000000000000000
           Position.X = 70.000000000000000000
           Position.Y = -26.000000000000000000
-          Size.Width = 204.000000000000000000
+          Size.Width = 202.000000000000000000
           Size.Height = 108.000000000000000000
           Size.PlatformDefault = False
           Text = 
@@ -106,7 +106,7 @@ object FrmResult2: TFrmResult2
         object Text1: TText
           Align = Bottom
           Position.Y = 82.000000000000000000
-          Size.Width = 344.000000000000000000
+          Size.Width = 342.000000000000000000
           Size.Height = 42.000000000000000000
           Size.PlatformDefault = False
           Text = 'Obrigado por jogar! :D'
@@ -117,15 +117,14 @@ object FrmResult2: TFrmResult2
       end
       object LayoutCenter: TLayout
         Align = Top
-        Position.X = -2.000000000000000000
         Position.Y = 97.000000000000000000
-        Size.Width = 344.000000000000000000
+        Size.Width = 342.000000000000000000
         Size.Height = 264.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
         object LayoutImage: TLayout
           Align = Top
-          Size.Width = 344.000000000000000000
+          Size.Width = 342.000000000000000000
           Size.Height = 145.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
@@ -202,7 +201,7 @@ object FrmResult2: TFrmResult2
         object LayoutResult: TLayout
           Align = Top
           Position.Y = 145.000000000000000000
-          Size.Width = 344.000000000000000000
+          Size.Width = 342.000000000000000000
           Size.Height = 136.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 1
@@ -226,14 +225,14 @@ object FrmResult2: TFrmResult2
                     PNG = {
                       89504E470D0A1A0A0000000D494844520000005A00000026080600000044488C
                       B8000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
-                      00E5494441546843EDDBB10DC2301445D167A3F4B47464039884599888156003
-                      9800468884102D35210E313213805F754FF5E3745791ABFCA0C978D7320DDA0D
-                      41AB469AE733FC2E25EDE34BDBD0AA0B39729F7426701DBDF4689E5A87E13A55
-                      8FDA94735490A463186F1ACB332AC95F752C332ACAD732A14D086D426813429B
-                      10DA84D026843621B409A14D086D426813429B10DA84D026843621B409A14D08
-                      6D426813429B10DA84D026843621B409A14D086D426813429B10DA24E65F4ACB
-                      8C8AE24CBA941995A4A403AB15957D572B6258A86BA2D6B97A79873FF85CC9A3
-                      4E9FFD9556DD1BF91F33EF5D185DCE0000000049454E44AE426082}
+                      00E5494441546843EDDBB10DC2301445D1670BA5A6A5830D601266612256800D
+                      600218211242B4D411D8C4919900FCAA7BAA1FA7BB8A5CE5078DF243CBF4D6FE
+                      15B4EEA47939C3EF52D221BEB40B2BF5A1441E922E046E63909EDDA04D78DFC6
+                      EA51DB7A8E0692740AF9AE5C9FD148F9AA639DD150B996096D426813429B10DA
+                      84D026843621B409A14D086D426813429B10DA84D026843621B409A14D086D42
+                      6813429B10DA84D026843621B409A14D086D426813429B10DA84D026B1FC525A
+                      67341467D2B5CE6824251D59AD68ECBB5A11C3427D17B529D5EB3BFCC1742567
+                      9DA7FD9595FA0FF79533F0D45BB0E30000000049454E44AE426082}
                   end>
                 Align = HorzCenter
                 Position.X = 92.000000000000000000
@@ -287,8 +286,7 @@ object FrmResult2: TFrmResult2
       end
       object LayoutTop: TLayout
         Align = Top
-        Position.X = -2.000000000000000000
-        Size.Width = 344.000000000000000000
+        Size.Width = 342.000000000000000000
         Size.Height = 97.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0

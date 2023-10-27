@@ -40,6 +40,8 @@ type
     procedure BtnConfirmarClick(Sender: TObject);
     procedure ExecuteQuestions;
     procedure UpdateQuestions;
+    procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char;
+      Shift: TShiftState);
   private
   public
     pontuacao: double;
@@ -64,6 +66,15 @@ begin
   posicaoPergunta := 0;
   posicaoResposta := 0;
   FrmQuestions.UpdateQuestions;
+end;
+
+procedure TFrmQuestions.FormKeyUp(Sender: TObject; var Key: Word;
+  var KeyChar: Char; Shift: TShiftState);
+begin
+  if(Key=vkHardwareBack) then
+  begin
+    Key:=0;
+  end;
 end;
 
 procedure TFrmQuestions.UpdateQuestions;
