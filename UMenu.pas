@@ -83,20 +83,20 @@ begin
   SetLength(perguntas, 4, 4);
 
   // Preencher a matriz de perguntas com strings de exemplo
-  perguntas[0, 0] := 'Como você percebe o papel da educação na formação integral de um indivíduo?';
-  perguntas[0, 1] := 'Qual é sua opinião sobre a acessibilidade à educação de qualidade para todas as camadas da sociedade?';
-  perguntas[0, 2] := 'Como você vê o papel das tecnologias educacionais no processo de aprendizagem?';
-  perguntas[0, 3] := 'Como você avalia a importância da educação contínua ao longo da vida?';
+  perguntas[0, 0] := 'Para você, qual o papel da educação na formação e evolução de um indivíduo?';
+  perguntas[0, 1] := 'Qual é sua opinião sobre a acessibilidade à educação de qualidade para todos, não importando a situação de vida das pessoas (classes sociais)?';
+  perguntas[0, 2] := 'Como você vê o papel das tecnologias educacionais avançadas no processo de aprendizagem?';
+  perguntas[0, 3] := 'Como você avalia a importância de estar sempre estudando ao longo da vida?';
 
   perguntas[1, 0] := 'Você acredita que a prática regular de atividades físicas é importante para a saúde?';
   perguntas[1, 1] := 'Você concorda que uma boa noite de sono e a prática de técnicas de relaxamento, como a meditação, contribuem para o seu bem-estar?';
   perguntas[1, 2] := 'Você acha necessário realizar check-ups médicos regularmente, mesmo quando não está doente? ';
   perguntas[1, 3] := 'Você acredita que equilibrar o tempo entre trabalho e vida pessoal, bem como manter relacionamentos saudáveis, é crucial para uma vida plena e saudável?';
 
-  perguntas[2, 0] := 'Como você percebe a importância da redução do uso de plástico no seu dia a dia?';
-  perguntas[2, 1] := 'O que pensa sobre o consumo consciente de energia em sua casa?';
-  perguntas[2, 2] := 'Qual é sua opinião sobre o desmatamento em nome do desenvolvimento econômico?';
-  perguntas[2, 3] := 'Como você enxerga a necessidade de conservar áreas verdes urbanas em sua comunidade?';
+  perguntas[2, 0] := 'Para você, qual a importância da redução do uso de plástico no seu dia a dia?';
+  perguntas[2, 1] := 'Como você avalia o seu consumo de energia em casa?';
+  perguntas[2, 2] := 'Qual é sua opinião sobre o desmatamento para evoluir no desenvolvimento econômico?';
+  perguntas[2, 3] := 'Qual o nível de importância em conservar as áreas verdes urbanas em sua comunidade?';
 
   perguntas[3, 0] := 'Você acredita que a internet facilita a comunicação entre as pessoas e fortalece os laços sociais?';
   perguntas[3, 1] := 'Você concorda que a internet é uma ferramenta poderosa para disseminar informações e conscientizar as pessoas sobre questões importantes?';
@@ -107,14 +107,14 @@ begin
   SetLength(respostas, 4, 16);
 
   // Preencher a matriz de respostas com strings de exemplo
-  respostas[0, 0] := 'Acredito que a educação desempenha um papel crucial no desenvolvimento global de uma pessoa.';
-  respostas[0, 1] := 'Reconheço sua importância, mas às vezes priorizo habilidades práticas sobre a educação formal.';
-  respostas[0, 2] := 'Apoio a educação, desde que esteja alinhada com as necessidades práticas da vida.';
+  respostas[0, 0] := 'Acredito que a educação desempenha um papel crucial no desenvolvimento e evolução global de uma pessoa.';
+  respostas[0, 1] := 'Reconheço sua importância, mas às vezes priorizo outras habilidades práticas ao invés da educação formal.';
+  respostas[0, 2] := 'Apoio a educação, desde que esteja alinhada com as necessidades práticas da vida de cada um.';
   respostas[0, 3] := 'Não vejo a educação como essencial para o desenvolvimento individual.';
-  respostas[0, 4] := 'Defendo ativamente a ideia de que todos devem ter acesso igualitário à educação de qualidade.';
+  respostas[0, 4] := 'Defendo totalmente a ideia de que todos devem ter acesso igualitário à educação de qualidade.';
   respostas[0, 5] := 'Concordo com a importância, mas reconheço que há desafios práticos na implementação.';
   respostas[0, 6] := 'Apoio, desde que haja esforços para melhorar a qualidade da educação em todos os níveis.';
-  respostas[0, 7] := 'Não considero a acessibilidade à educação um problema significativo.';
+  respostas[0, 7] := 'Não considero a acessibilidade à educação um problema significativo no mundo atualmente.';
   respostas[0, 8] := 'Acredito que as tecnologias educacionais são ferramentas valiosas para melhorar o ensino e aprendizado.';
   respostas[0, 9] := 'Reconheço sua utilidade, mas acredito que a abordagem tradicional ainda é mais eficaz.';
   respostas[0, 10] := 'Apoio, desde que as tecnologias sejam usadas de maneira equilibrada com métodos tradicionais.';
@@ -142,14 +142,14 @@ begin
   respostas[1, 15] := 'Não vejo problemas em dedicar a maior parte do tempo ao trabalho. Isso é o que traz realização.';
 
   respostas[2, 0] := 'Reconheço e pratico ativamente a redução para diminuir a poluição.';
-  respostas[2, 1] := 'Aceito a necessidade, mas às vezes escolho a conveniência do plástico.';
+  respostas[2, 1] := 'Entendo a necessidade, mas às vezes escolho a conveniência do plástico.';
   respostas[2, 2] := 'Apoio a redução, desde que haja alternativas sustentáveis disponíveis.';
   respostas[2, 3] := 'Não vejo a necessidade de mudar meus hábitos em relação ao plástico.';
   respostas[2, 4] := 'Adoto medidas consistentes para reduzir meu consumo de energia.';
   respostas[2, 5] := 'Faço alguns esforços, mas às vezes priorizo conveniência sobre eficiência energética.';
   respostas[2, 6] := 'Apoio a ideia, desde que não comprometa muito meu conforto.';
   respostas[2, 7] := 'Não presto muita atenção ao meu consumo de energia.';
-  respostas[2, 8] := 'Discordo veementemente, priorizando a preservação ambiental sobre o desenvolvimento.';
+  respostas[2, 8] := 'Discordo totalmente, priorizando a preservação ambiental sobre o desenvolvimento.';
   respostas[2, 9] := 'Tenho reservas e acredito que deve haver um equilíbrio entre desenvolvimento e preservação.';
   respostas[2, 10] := 'Concordo com o desenvolvimento, desde que haja esforços para replantar áreas desmatadas.';
   respostas[2, 11] := 'Concordo, considerando o desenvolvimento econômico mais importante que a preservação ambiental.';
